@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BASE="$HOME/family-node-kit/system/bin"
+
+CMD="${1:-}"
+
+case "$CMD" in
+  start)
+    "$BASE/start-bitcoin-services.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  stop)
+    "$BASE/stop-bitcoin-services.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  status)
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null
+    "$HOME/family-node-kit/system/bin/status-engine.sh" all
+    ;;
+  rotate)
+    "$BASE/rotate-bitcoin-rpc.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  clean)
+    "$BASE/clean-bitcoin-files.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  reset)
+    "$BASE/reset-bitcoin-node.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  tor-start)
+    "$BASE/start-tor.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  tor-stop)
+    "$BASE/stop-tor.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  tor-info)
+    "$BASE/tor-info.sh"
+    ;;
+  update)
+    "$BASE/install-update.sh" "${2:-}"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  bootstrap)
+    "$BASE/bootstrap.sh"
+    "$HOME/family-node-kit/system/bin/state-engine.sh" >/dev/null 2>&1
+    ;;
+  verify)
+    "$BASE/verify-family-node.sh"
+    ;;
+  *)
+    echo "================================="
+    echo " Family Node Command Interface"
+    echo "================================="
+    echo
+    echo "Core:"
+    echo "  start | stop | status"
+    echo
+    echo "Maintenance:"
+    echo "  rotate | clean | reset"
+    echo
+    echo "Tor:"
+    echo "  tor-start | tor-stop | tor-info"
+    echo
+
+    exit 1
+    ;;
+esac

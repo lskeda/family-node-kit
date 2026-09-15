@@ -1,0 +1,33 @@
+# Family Node Kit development area
+admin-tools/
+
+# Release packages
+*.tar.gz
+
+# Runtime / local data
+.bitcoin/
+.fulcrum/
+.tor-electrum/
+.sparrow/
+
+# Logs
+*.log
+
+# Local environment / credentials
+.env
+.env.*
+*.env
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.backup
+*.before-*
+*.save
+
+# OS / desktop metadata
+.DS_Store
+Thumbs.db

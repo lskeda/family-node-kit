@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Family Node Kit Dashboard
+Comment=Control Bitcoin Core, Fulcrum and Tor
+Exec=family-node-dashboard
+Terminal=true
+Categories=Network;
+Icon=dashboard

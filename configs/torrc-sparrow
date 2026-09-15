@@ -1,0 +1,5 @@
+# SOCKS port for Sparrow
+SocksPort 127.0.0.1:9050
+
+# Control port (no password)
+ControlPort 9051
