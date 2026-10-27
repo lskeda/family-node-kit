@@ -1,7 +1,6 @@
 # FULCRUM MANAGEMENT
 
 ## Official Releases • Verification • Updates • Container Isolation
-
 ---
 
 > **Don't Trust. Verify.**
@@ -30,17 +29,17 @@ Fulcrum is the Electrum server used by the Family Node Kit.
 It runs inside a Podman container while its persistent data remains
 outside the container.
 
-                    FAMILY NODE KIT
-                           │
-             ┌─────────────┴─────────────┐
-             │                           │
-          Bitcoin                      Podman
-                                         │
-                                         ▼
-                                      Fulcrum
-                                         │
-                                         ▼
-                                  ~/.fulcrum
+                 FAMILY NODE KIT
+                        │
+          ┌─────────────┴─────────────┐
+          │                           │
+        Bitcoin                     Podman
+                                      │
+                                      ▼
+                                    Fulcrum
+                                      │
+                                      ▼
+                                 ~/.fulcrum
 
 This separates the Fulcrum runtime environment from its persistent data.
 
@@ -283,20 +282,20 @@ The Kit distinguishes between three different situations:
 Therefore, starting the node does not blindly attempt to create a second
 container with the same name.
 
-                    FULCRUM
-                       │
-              ┌────────┴────────┐
-              │                 │
-           RUNNING            STOPPED
-              │                 │
-              ▼                 ▼
-          KEEP RUNNING      START EXISTING
-                                  │
-                                  │
-                         container does not exist
-                                  │
-                                  ▼
-                              CREATE NEW
+                FULCRUM
+                   │
+          ┌────────┴────────┐
+          │                 │
+        RUNNING           STOPPED
+          │                 │
+          ▼                 ▼
+        KEEP RUNNING      START EXISTING
+                            │
+                            │
+                    container does not exist
+                            │
+                            ▼
+                        CREATE NEW
 
 This allows the Kit to safely resume an existing Fulcrum container.
 
@@ -459,36 +458,36 @@ No changes are made to the system.
 
 # 13. THE COMPLETE MODEL
 
-                         OFFICIAL FULCRUM
-                               │
-                               ▼
-                       🟡 DETECT UPDATE
-                               │
-                               ▼
-                      PERSONAL REVIEW
-                               │
-                         ┌─────┴─────┐
-                         │           │
-                         N           Y
-                         │           │
-                         ▼           ▼
-                       KEEP      PULL IMAGE
-                                      │
-                                      ▼
-                                VERIFY DIGEST
-                                      │
-                                      ▼
-                              STAGED CONTAINER
-                                      │
-                                      ▼
-                             VERIFY VERSION
-                              + RELEASE
-                                      │
-                                      ▼
-                              REPLACE CONTAINER
-                                      │
-                                      ▼
-                                🟢 VERIFIED
+                 OFFICIAL FULCRUM
+                       │
+                       ▼
+               🟡 DETECT UPDATE
+                       │
+                       ▼
+               PERSONAL REVIEW
+                       │
+                 ┌─────┴─────┐
+                 │           │
+                 N           Y
+                 │           │
+                 ▼           ▼
+                KEEP      PULL IMAGE
+                             │
+                             ▼
+                       VERIFY DIGEST
+                             │
+                             ▼
+                      STAGED CONTAINER
+                             │
+                             ▼
+                      VERIFY VERSION
+                       + RELEASE
+                             │
+                             ▼
+                     REPLACE CONTAINER
+                             │
+                             ▼
+                       🟢 VERIFIED
 
 ---
 
@@ -558,9 +557,9 @@ Only then is the running installation replaced.
 
 ---
 
-                    THE COMPUTER DETECTS.
-                         THE USER DECIDES.
-                            THE KIT VERIFIES.
+        THE COMPUTER DETECTS.
+             THE USER DECIDES.
+                THE KIT VERIFIES.
 
 ---
 

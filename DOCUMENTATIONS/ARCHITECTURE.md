@@ -19,7 +19,7 @@ modular and maintainable as the software managed by the Kit evolves.
 
 ---
 
-# Architecture Overview
+## Architecture Overview
 
 The Family Node Kit follows a strict separation between:
 
@@ -75,7 +75,7 @@ These are related, but they are not the same thing.
 
 ---
 
-# Project Layout
+## Project Layout
 
 The principal project structure is:
 
@@ -109,7 +109,7 @@ The principal project structure is:
 
 ---
 
-# Documentation
+## Documentation
 
 All user and project documentation is kept in:
 
@@ -122,7 +122,8 @@ Documentation includes subjects such as:
 - Dashboard usage
 - Fulcrum management
 - Sparrow usage
-- Backup and recovery
+- Wasabi Wallet usage (optional external wallet)
+- Backup and recovery, including wallet and Tor data
 - Fedora Silverblue
 - Software verification
 - Uninstallation
@@ -221,6 +222,37 @@ rather than implementing Bitcoin, Fulcrum or Tor verification itself.
 The Dashboard is the conductor.
 
 It is not the instrument.
+
+### Optional external wallets
+
+The Dashboard may provide launch shortcuts for external wallet
+applications, such as Sparrow and Wasabi.
+
+These applications remain separate from the Kit's core runtime:
+
+- The Kit may check prerequisites and launch an application.
+- The Kit does not create, import, or manage the application's wallets.
+- The application is installed and updated separately unless explicitly
+  documented otherwise.
+- Wallet data remains in the application's own data directories.
+- The Dashboard must keep launch checks simple and must not duplicate
+  wallet-specific business logic.
+
+Wasabi is an optional advanced wallet launched through:
+
+    COINJ) Open Wasabi Wallet
+
+The current launch action checks that the configured Wasabi AppImage
+exists and is executable, and that Bitcoin Core is running. Wasabi
+connects to Bitcoin Core through the local RPC interface. The current
+Kit uses username/password RPC credentials; after the Kit's RPC password
+is rotated, Wasabi's saved credentials must be updated before it can
+reconnect.
+
+Detailed setup, RPC connection, privacy notes, and troubleshooting
+belong in:
+
+    MANAGE-WASABI-WALLET.md
 
 ---
 
@@ -630,7 +662,7 @@ The Family Node Kit uses versioned official Fulcrum container images.
 
 For example:
 
-    docker.io/cculianu/fulcrum:v2.1.2
+    docker.io/cculianu/fulcrum: v2.1.2
 
 The Kit does not rely on the mutable `latest` tag for normal
 Fulcrum operation.

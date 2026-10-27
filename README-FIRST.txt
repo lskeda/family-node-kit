@@ -1,8 +1,8 @@
 
-========================================
+==================
 FAMILY NODE KIT
 README FIRST
-========================================
+==================
 
 Family Node Kit helps individuals and families operate a Bitcoin node 
 using official upstream software and clear, verifiable procedures. 
@@ -212,13 +212,14 @@ monitoring your Bitcoin node.
 
 The following documents are included with Family Node Kit.
 
-- START HERE.txt
+- INSTALL-START-HERE.txt
 
 DOCUMENTATIONS/
 ├── ARCHITECTURE.md
 ├── UPDATE-BITCOIN-CORE.md
 ├── FULCRUM-MANAGEMENT.md
 ├── USING-SPARROW.md
+├── MANAGE-WASABI-WALLET.md
 ├── DASHBOARD-USER-GUIDE.md
 ├── GPG-VERIFYING-DOWNLOADS.md
 ├── BACKUP-AND-RECOVERY.md
@@ -226,7 +227,7 @@ DOCUMENTATIONS/
 ├── UNINSTALL.md
 └── CHANGELOG.md
 
-START HERE.txt provides a short introduction and points to
+INSTALL-START-HERE.txt provides a short introduction and points to
 README-FIRST.txt.
 
 ARCHITECTURE.md explains how the Family Node Kit is structured
@@ -239,6 +240,8 @@ updated, and verified.
 
 USING-SPARROW.md explains how Sparrow Wallet is used with the
 node.
+
+MANAGE-WASABI-WALLET.md explains how to use Wasabi as an optional advanced wallet, connect it to Bitcoin Core, manage RPC credentials, and troubleshoot common issues.
 
 DASHBOARD-USER-GUIDE.md explains Dashboard operation and management.
 
@@ -257,9 +260,9 @@ CHANGELOG.md records important changes to the project.
 
 ---
 
-========================================
+=======================
 INSTALLATION NEXT STEP
-========================================
+=======================
 
 Inside the extracted "family-node-kit" folder:
 
@@ -276,6 +279,6 @@ Then follow the on-screen instructions.
 
 Enjoy your Bitcoin journey.
 
-========================================
+===============
 END OF README
-========================================
+===============

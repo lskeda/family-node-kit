@@ -112,6 +112,7 @@ while true; do
     echo "5) Show Onion Address (connect External Wallet)"
     echo
     echo "RPC) Rotate Bitcoin RPC Password"
+    echo "COINJ) Open Wasabi Wallet"
     echo
     echo "RESET) Reset Node"
     echo "CLEAN) Clear System Log Only"
@@ -177,6 +178,24 @@ while true; do
             echo "[ACTION] Rotating RPC..."
             family-node rotate || true
             read -rp "Press Enter..."
+            ;;
+
+        COINJ)
+            WASABI="$HOME/Apps/Wasabi/Wasabi-2.8.3.AppImage"
+
+            if [[ ! -x "$WASABI" ]]; then
+                echo "[ERROR] Wasabi Wallet not found:"
+                echo "        $WASABI"
+                read -rp "Press Enter..."
+            elif ! is_bitcoin_running; then
+                echo "[ERROR] Bitcoin Core is not running."
+                echo "Please start Bitcoin + Fulcrum first."
+                read -rp "Press Enter..."
+            else
+                echo "[ACTION] Opening Wasabi Wallet..."
+                nohup "$WASABI" >/dev/null 2>&1 &
+                disown
+            fi
             ;;
 
         RESET)

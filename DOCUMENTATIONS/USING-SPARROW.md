@@ -1,6 +1,7 @@
-===========================================
-INSTALL/UPDATE SPARROW WITH FAMILY NODE KIT
-===========================================
+======================
+INSTALL/UPDATE SPARROW
+WITH FAMILY NODE KIT
+======================
 
 ## Installing Sparrow Wallet
 
@@ -72,9 +73,10 @@ folder with the new one in:
 ```
 to maintain the same location as before.
 
-========================================
-USING SPARROW WITH FAMILY NODE KIT
-========================================
+==================
+USING SPARROW WITH
+FAMILY NODE KIT
+==================
 
 Family Node Kit uses Sparrow Wallet as the wallet
 interface for your Bitcoin node.
@@ -220,8 +222,8 @@ Family Node Kit does not manage:
 Your wallet and your Bitcoin remain under your control.
 
 Don't Trust. Verify.
-========================================
+====================
 END OF DOCUMENT
-========================================
+====================
 
 

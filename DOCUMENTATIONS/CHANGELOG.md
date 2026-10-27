@@ -1,10 +1,37 @@
 # Family Node Kit
 
 ## Changelog
-
 ---
 
-## Unreleased - 2026-08-29
+## 1.1.0 - 2026-10-27
+
+### Dashboard Menu Routing Fix
+
+* Corrected the Dashboard menu selectors for Tor actions so they match
+  their displayed options:
+  * `3)` starts the Tor proxy for external-wallet access.
+  * `4)` stops the Tor proxy.
+  * `5)` displays the onion address.
+* Verified the Dashboard script with `bash -n` and tested all three
+  menu options successfully.
+
+
+### Graceful Service Shutdown
+
+* Changed the shutdown order so Fulcrum stops before Bitcoin Core.
+* Added a Podman availability check before beginning shutdown.
+* Fulcrum receives SIGTERM and is given up to 300 seconds to exit.
+* The shutdown process checks Fulcrum's container state and aborts
+  before stopping Bitcoin Core if Fulcrum cannot be stopped or its
+  final state cannot be verified.
+* Bitcoin Core is stopped only after Fulcrum has exited.
+* Tor is stopped after Bitcoin Core.
+* Added explicit error reporting for shutdown failures.
+* External SSD testing confirmed clean shutdown while Bitcoin was still
+  synchronizing, with Fulcrum active.
+* Fulcrum completed its shutdown before Bitcoin Core stopped.
+* Both services restarted successfully, existing blockchain and index
+  data were preserved, and Sparrow reconnected.
 
 ### System Time and UTC
 

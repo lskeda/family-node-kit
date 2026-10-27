@@ -1,7 +1,7 @@
-========================================
+===================
 FEDORA SILVERBLUE
 AND FAMILY NODE KIT
-========================================
+===================
 
 Don't Trust. Verify.
 
@@ -121,34 +121,34 @@ Family Node Kit.
 
 It is useful to think of the system as three separate layers.
 
-┌─────────────────────────────────────┐
-│       USER / BITCOIN DATA           │
-│                                     │
-│  ~/.bitcoin                         │
-│  ~/.fulcrum                         │
-│  ~/.sparrow                         │
-└─────────────────────────────────────┘
+┌────────────────────────────┐
+│       USER / BITCOIN DATA  │
+│                            │
+│  ~/.bitcoin                │
+│  ~/.fulcrum                │
+│  ~/.sparrow                │
+└────────────────────────────┘
                   │
                   │
-┌─────────────────────────────────────┐
-│       FAMILY NODE KIT               │
-│                                     │
-│  Dashboard                          │
-│  Bitcoin Core                       │
-│  Fulcrum                            │
-│  Tor                                │
-│  Verification                       │
-└─────────────────────────────────────┘
+┌────────────────────────────┐
+│       FAMILY NODE KIT      │
+│                            │
+│  Dashboard                 │
+│  Bitcoin Core              │
+│  Fulcrum                   │
+│  Tor                       │
+│  Verification              │
+└────────────────────────────┘
                   │
                   │
-┌─────────────────────────────────────┐
-│       FEDORA SILVERBLUE             │
-│                                     │
-│  Operating system                   │
-│  Atomic updates                     │
-│  Rollback                           │
-│  Containers / Flatpak               │
-└─────────────────────────────────────┘
+┌────────────────────────────┐
+│       FEDORA SILVERBLUE    │
+│                            │
+│  Operating system          │
+│  Atomic updates            │
+│  Rollback                  │
+│  Containers / Flatpak      │
+└────────────────────────────┘
 
 Each layer has a different responsibility.
 
@@ -493,5 +493,5 @@ The user remains in control.
 
 Don't Trust. Verify.
 
-========================================
+================
 END OF DOCUMENT

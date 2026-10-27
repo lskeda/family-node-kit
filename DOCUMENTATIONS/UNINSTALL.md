@@ -1,6 +1,6 @@
-========================================
+==========
 UNINSTALL
-========================================
+==========
 
 Don't Trust. Verify.
 
@@ -75,19 +75,43 @@ make sure you have a current backup.
 
 Read:
 
-BACKUP-AND-RECOVERY.md
+`BACKUP-AND-RECOVERY.md`
 
 In particular, verify that you have safely backed up:
 
-~/.bitcoin
-~/.fulcrum
+**Bitcoin node and indexer data**
 
-and, if applicable:
+- `~/.bitcoin`
+- `~/.fulcrum`
 
-~/.sparrow
+**Wallet data, if applicable**
 
-Your recovery phrase should always be backed up
-independently of the computer.
+- `~/.sparrow`
+- `~/.walletwasabi/client`
+
+**Tor data, if applicable**
+
+- `~/.tor-electrum`
+
+Back up the Tor data if you want to preserve the existing onion-service identity. Protect any private keys contained in this directory.
+
+**Wasabi application (optional)**
+
+- `~/Apps/Wasabi/Wasabi-2.8.3.AppImage`
+- `~/Apps/Wasabi/Wasabi-2.8.3.AppImage.asc`
+
+The Wasabi application can be downloaded again from its official source. Always verify the downloaded release before running it.
+
+**Important security notes**
+
+- The `~/.bitcoin` backup includes `bitcoin.conf`, which may contain RPC credentials.
+- `~/.family-node-kit/env/rpc.env` also contains RPC credentials. Back it up only if you specifically need to preserve the current credentials, and protect it as a secret. The Kit can generate new credentials when necessary.
+- Wasabi wallet files and transaction labels contain sensitive financial and privacy-related information. Store backups securely, preferably on encrypted storage.
+- Never include RPC credentials, wallet recovery phrases, or wallet passphrases in public repositories or documentation.
+
+Your wallet recovery phrase and any required wallet passphrase must always be backed up independently of the computer.
+
+**Before removing anything, verify that your backups exist and are readable.**
 
 ---
 
@@ -207,6 +231,6 @@ your control.
 
 Don't Trust. Verify.
 
-========================================
+===============
 END OF DOCUMENT
-========================================
+===============

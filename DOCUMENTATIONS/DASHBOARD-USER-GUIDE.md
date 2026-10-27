@@ -1,7 +1,7 @@
-========================================
-       FAMILY NODE DASHBOARD
-       USER GUIDE
-========================================
+============================
+FAMILY NODE DASHBOARD
+USER GUIDE
+============================
 
 Use this guide together with the Family Node Dashboard.
 
@@ -169,6 +169,38 @@ Use this only when required.
 The Kit updates the required configuration.
 
 ----------------------------------------
+COINJ) OPEN WASABI WALLET
+----------------------------------------
+
+Opens Wasabi Wallet, an optional wallet for users who want to explore
+advanced Bitcoin privacy tools.
+
+Wasabi is installed and maintained separately from Family Node Kit. The
+Kit only launches the application.
+
+Bitcoin Core must be running before you open Wasabi. If Bitcoin Core is
+stopped, start Bitcoin + Fulcrum first.
+
+Wasabi connects to the local Bitcoin Core RPC interface. The current
+endpoint used by the Kit is:
+
+    http://127.0.0.1:8332/
+
+Configure Wasabi with the current RPC credentials managed by Family Node
+Kit. Keep these credentials private. Never publish them or expose the
+Bitcoin RPC interface to the public internet.
+
+IMPORTANT --- RPC PASSWORD ROTATION:
+
+If you use RPC) Rotate Bitcoin RPC Password, Wasabi's saved credentials
+will no longer match the Kit's new credentials. Update the credentials
+in Wasabi and reconnect it before using Wasabi again.
+
+For the full Wasabi setup and connection procedure, see:
+
+MANAGE-WASABI-WALLET.md
+
+----------------------------------------
 RESET) RESET NODE
 ----------------------------------------
 
@@ -210,9 +242,9 @@ Closes the Dashboard.
 
 The current services remain in their current state.
 
-========================================
+============================
 IMPORTANT: READ THE TERMINAL
-========================================
+============================
 
 The Kit uses the terminal to:
 
@@ -233,9 +265,9 @@ IMPORTANT:
         WAIT FOR THE FINAL RESULT.
         REVIEW BEFORE PRESS ENTER.
 
-========================================
+===============================
 BEFORE USING YOUR WALLET ONLINE
-========================================
+===============================
 
 1. Check the system time with UTC.
 2. Run KIT.
@@ -250,9 +282,9 @@ blockchain is synchronized.
 Only proceed when Sparrow shows that the blockchain is 
 synchronized with the current chain tip.
 
-========================================
+==============
 GOOD PRACTICES
-========================================
+==============
 
 • Use KIT before starting or using the node.
 • Read the terminal messages.
@@ -269,9 +301,9 @@ GOOD PRACTICES
 When something is unclear, stop and check the
 appropriate documentation before continuing.
 
-========================================
+===============
 FAMILY NODE KIT
-========================================
+===============
 
 Don't Trust. Verify.
-========================================
+====================
