@@ -180,6 +180,16 @@
 * Removed duplicate Fulcrum verification output from the Family Node
   Kit Health Report.
 
+* Added a read-only Bitcoin Core release checker to the Health Report.
+* The checker reports the latest listed maintenance release for the
+  installed major branch and the latest stable release listed overall.
+* A newer major release triggers an informational notice and manual
+  update instructions.
+* The checker does not download or install Bitcoin Core and does not
+  change the Bitcoin startup process.
+* Network or version-detection failures are reported as notices rather
+  than being treated as proof that an update is available.
+
 ### Testing
 
 Additional testing completed during the final release preparation:

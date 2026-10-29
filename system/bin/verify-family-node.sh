@@ -118,6 +118,19 @@ echo
 echo "  DOCUMENTATIONS/UPDATE-BITCOIN-CORE.md"
 echo
 
+echo
+echo "================================="
+echo " BITCOIN CORE RELEASE NOTIFICATION"
+echo "================================="
+echo
+
+if [[ -x "$SCRIPT_DIR/check-bitcoin-core-update.sh" ]]; then
+    "$SCRIPT_DIR/check-bitcoin-core-update.sh" || true
+else
+    echo "Release checker is not installed."
+fi
+
+echo
 "$SCRIPT_DIR/verify-fulcrum.sh"
 
 echo
