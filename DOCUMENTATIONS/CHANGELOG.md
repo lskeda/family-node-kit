@@ -3,6 +3,18 @@
 ## Changelog
 ---
 
+## 1.1.1 - 2026-10-29
+
+### Bitcoin Core Release Notification
+
+* Added a read-only Bitcoin Core release checker to the Family Node Kit
+  Health Report.
+* Reports the latest listed maintenance release for the installed major
+  branch and the latest stable release listed overall.
+* Provides informational notices and manual update instructions when a
+  newer release is listed.
+* Does not download or install Bitcoin Core or change the startup process.
+
 ## 1.1.0 - 2026-10-27
 
 ### Dashboard Menu Routing Fix
